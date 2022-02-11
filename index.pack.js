@@ -83,44 +83,22 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
-Challenge: 
+function Header() {
+    return _react2.default.createElement(
+        "header",
+        null,
+        _react2.default.createElement(
+            "nav",
+            null,
+            _react2.default.createElement("img", { src: "./react-logo.png", alt: "Logo", width: "40px" })
+        )
+    );
+}
 
-Part 1: Create a page of your own using a custom Page component
-
-It should return an ordered list with the reasons why you're
-excited to be learning React :)
-
-Render your list to the page
-
- */
-/**
-Challenge: 
-
-Part 2: 
-- Add a `header` element with a nested `nav` element. Inside the `nav`,
-  include a `img` element with the image of the React logo inside
-  (src="./react-logo.png") and make sure to set the width to something
-  more manageable so it doesn't take up the whole screen
-- Add an `h1` with some text describing the page. (E.g. "Reasons
-  I'm excited to learn React"). Place it above the ordered list.
-- Add a `footer` after the list that says: 
-    "© 20xx <last name here> development. All rights reserved."
- */
-
-function Page() {
+function MainContent() {
     return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "nav",
-                null,
-                _react2.default.createElement("img", { src: "./react-logo.png", alt: "Logo", width: "40px" })
-            )
-        ),
         _react2.default.createElement(
             "h1",
             null,
@@ -139,16 +117,29 @@ function Page() {
                 null,
                 "I'm more likely to get a job as a developer if I know React"
             )
-        ),
-        _react2.default.createElement(
-            "footer",
-            null,
-            _react2.default.createElement(
-                "small",
-                null,
-                "\xA9 2022 Sufian development. All rights reserved."
-            )
         )
+    );
+}
+
+function Footer() {
+    return _react2.default.createElement(
+        "footer",
+        null,
+        _react2.default.createElement(
+            "small",
+            null,
+            "\xA9 2022 Sufian development. All rights reserved."
+        )
+    );
+}
+
+function Page() {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(Header, null),
+        _react2.default.createElement(MainContent, null),
+        _react2.default.createElement(Footer, null)
     );
 }
 
