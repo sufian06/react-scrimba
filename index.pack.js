@@ -83,17 +83,67 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var hello = _react2.default.createElement(
-    "nav",
+/**
+Challenge: find out what happens if we try to append JSX
+to our div#root using .append() instead of ReactDOM
+
+1. Create a sample page in JSX (≥ 4 elements) and save them in a variable
+2. Select the div with the ID of "root" and use `.append()` to append
+   your JSX
+3. See if you can guess what will show up in the browser before running
+   the code
+4. See if you can explain what actually shows up in the browser
+ */
+
+var page = _react2.default.createElement(
+    "div",
     null,
     _react2.default.createElement(
         "h1",
         null,
-        "Hello, World!"
+        "My Awesome website in React"
+    ),
+    _react2.default.createElement(
+        "h3",
+        null,
+        "Reasons I love React"
+    ),
+    _react2.default.createElement(
+        "ol",
+        null,
+        _react2.default.createElement(
+            "li",
+            null,
+            "It's composable"
+        ),
+        _react2.default.createElement(
+            "li",
+            null,
+            "It's declarative"
+        ),
+        _react2.default.createElement(
+            "li",
+            null,
+            "It's a hireable skill"
+        ),
+        _react2.default.createElement(
+            "li",
+            null,
+            "It's actively maintained by skilled people"
+        )
     )
 );
 
-_reactDom2.default.render(hello, document.getElementById("root"));
+// document.getElementById("root").append(JSON.stringify(page))
+
+/**
+Challenge: fix our code!
+
+Don't forget, you're not using CDNs anymore, so there's no
+global "ReactDOM" variable to use anymore.
+ */
+
+_reactDom2.default.render(page, document.getElementById("root"));
 
 /***/ }),
 /* 1 */
