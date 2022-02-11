@@ -95,11 +95,6 @@ var _MainContent2 = _interopRequireDefault(_MainContent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
-Challenge: move the Footer and MainContent components
-into their own files.
-*/
-
 function App() {
     return _react2.default.createElement(
         "div",
