@@ -83,65 +83,60 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
-Challenge: find out what happens if we try to append JSX
-to our div#root using .append() instead of ReactDOM
+/*
+Challenge: Starting from scratch, build and render the 
+HTML for our section project. Check the Google slide for 
+what you're trying to build.
 
-1. Create a sample page in JSX (≥ 4 elements) and save them in a variable
-2. Select the div with the ID of "root" and use `.append()` to append
-   your JSX
-3. See if you can guess what will show up in the browser before running
-   the code
-4. See if you can explain what actually shows up in the browser
+We'll be adding styling to it later.
+
+Hints:
+* The React logo is a file in the project tree, so you can
+  access it by using `src="./react-logo.png" in your image
+  element
+* You can also set the `width` attribute of the image element
+  just like in HTML. In the slide, I have it set to 40px
  */
 
 var page = _react2.default.createElement(
-    "div",
+  "div",
+  null,
+  _react2.default.createElement("img", { src: "./react-logo.png", width: "40px" }),
+  _react2.default.createElement(
+    "h1",
+    null,
+    "Fun facts about React"
+  ),
+  _react2.default.createElement(
+    "ul",
     null,
     _react2.default.createElement(
-        "h1",
-        null,
-        "My Awesome website in React"
+      "li",
+      null,
+      "Was first realeased in 2013"
     ),
     _react2.default.createElement(
-        "h3",
-        null,
-        "Reasons I love React"
+      "li",
+      null,
+      "Was originally created by Jordan Walke"
     ),
     _react2.default.createElement(
-        "ol",
-        null,
-        _react2.default.createElement(
-            "li",
-            null,
-            "It's composable"
-        ),
-        _react2.default.createElement(
-            "li",
-            null,
-            "It's declarative"
-        ),
-        _react2.default.createElement(
-            "li",
-            null,
-            "It's a hireable skill"
-        ),
-        _react2.default.createElement(
-            "li",
-            null,
-            "It's actively maintained by skilled people"
-        )
+      "li",
+      null,
+      "Has well over 100k stars on Github"
+    ),
+    _react2.default.createElement(
+      "li",
+      null,
+      "Is maintained by Facebook"
+    ),
+    _react2.default.createElement(
+      "li",
+      null,
+      "Powers thousands of enterprise apps, including mobile apps"
     )
+  )
 );
-
-// document.getElementById("root").append(JSON.stringify(page))
-
-/**
-Challenge: fix our code!
-
-Don't forget, you're not using CDNs anymore, so there's no
-global "ReactDOM" variable to use anymore.
- */
 
 _reactDom2.default.render(page, document.getElementById("root"));
 

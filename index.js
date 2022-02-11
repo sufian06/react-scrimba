@@ -1,39 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/**
-Challenge: find out what happens if we try to append JSX
-to our div#root using .append() instead of ReactDOM
+/*
+Challenge: Starting from scratch, build and render the 
+HTML for our section project. Check the Google slide for 
+what you're trying to build.
 
-1. Create a sample page in JSX (≥ 4 elements) and save them in a variable
-2. Select the div with the ID of "root" and use `.append()` to append
-   your JSX
-3. See if you can guess what will show up in the browser before running
-   the code
-4. See if you can explain what actually shows up in the browser
+We'll be adding styling to it later.
+
+Hints:
+* The React logo is a file in the project tree, so you can
+  access it by using `src="./react-logo.png" in your image
+  element
+* You can also set the `width` attribute of the image element
+  just like in HTML. In the slide, I have it set to 40px
  */
 
-const page = (
+
+  const page = (
     <div>
-        <h1>My Awesome website in React</h1>
-        <h3>Reasons I love React</h3>
-        <ol>
-            <li>It's composable</li>
-            <li>It's declarative</li>
-            <li>It's a hireable skill</li>
-            <li>It's actively maintained by skilled people</li>
-        </ol>
+        <img src="./react-logo.png" width="40px" />
+        <h1>Fun facts about React</h1>
+        <ul>
+            <li>Was first realeased in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100k stars on Github</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprise apps, including mobile apps</li>
+        </ul>
     </div>
-)
+  )
 
-// document.getElementById("root").append(JSON.stringify(page))
-
-/**
-Challenge: fix our code!
-
-Don't forget, you're not using CDNs anymore, so there's no
-global "ReactDOM" variable to use anymore.
- */
-
-
-ReactDOM.render(page, document.getElementById("root"))
+  ReactDOM.render(page, document.getElementById("root"));
